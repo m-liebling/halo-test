@@ -1,0 +1,21 @@
+<mat-sidenav-container class="main-container">
+
+  <mat-sidenav mode="side" opened class="hl-sidenav">
+    <mat-nav-list class="users-list">
+      <a mat-list-item *ngFor="let user of users; let i = index"
+         [routerLink]="['/', i]"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="{exact:true}"
+      (click)="selectUser(i)">
+        {{user?.name}}
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+    <router-outlet></router-outlet>
+
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

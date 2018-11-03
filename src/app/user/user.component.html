@@ -1,0 +1,28 @@
+
+<div class="hl-card-container">
+  <mat-card class="hl-card">
+
+    <div class="hl-header">
+      <img src="{{selectedUser?.picture}}"  class="header-user-image"/>
+    </div>
+
+
+    <div class="hl-content horizontal-center">
+      <p id="user_title">{{selectedOption}}</p>
+      <p id="user_value" [ngClass]="{'capitalize': capitalize}">{{selectedValue}}</p>
+    </div>
+
+
+    <div class="icons-container">
+      <mat-card-actions class="icons">
+        <mat-icon *ngFor="let val of userDetails"
+                  (mouseover)="selectDetails(val.selText, val.valueName, val.capitalize)">{{val.iconName}}</mat-icon>
+      </mat-card-actions>
+    </div>
+
+
+
+  </mat-card>
+
+
+</div>
