@@ -1,5 +1,5 @@
 
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+// @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 @import '~material-design-icons/iconfont/material-icons.css';
 
@@ -12,7 +12,7 @@ html {
   height: 100%;
 }
 body {
-  // min-height: 800px;
+
   height: 100%;
   transition: all .25s ease-in-out;
   display: block;
@@ -36,7 +36,7 @@ body {
   position: relative;
   height: 100%;
   display: block;
-  //transform: translate(0%, 80%);
+
 }
 .hl-card {
   position: relative;
@@ -149,7 +149,7 @@ mat-sidenav-content {
 }
 
 .icons-container {
-  // margin-top: 30px;
+
 }
 .users-list {
   position: relative;

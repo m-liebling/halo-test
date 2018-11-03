@@ -34,28 +34,24 @@ export class UserComponent implements OnInit {
     this.subscriber = this.interactor.subject.subscribe(value => {
       const id = this.router.snapshot.params['id'];
       this.selectedUser = this.interactor.users[id];
-      console.log('selected: ' + this.selectedUser);
-      // this.selectedValue = this.interactor.users[id].name;
+      // console.log('selected: ' + this.selectedUser);
     });
     this.router.params.subscribe(value => {
       this.selectedUser = this.interactor.users[value['id']];
-      // console.log('selected: ' + this.selectedUser.name); // selUser - undefined
     });
-    this.selectedOption = 'Hi, My name is';
+    this.selectedOption = this.userDetails[0].selText;
 
 
-   // *////////////////////////////////////delete
-    this.sharingService.getData().subscribe(
-value => {
-  if (value.selectedUser !== undefined) {
-    this.selectedUser = value.selectedUser;
-  }
-}
-    );
+//     this.sharingService.getData().subscribe(
+// value => {
+//   if (value.selectedUser !== undefined) {
+//     this.selectedUser = value.selectedUser;
+//   }
+// });
   }
   selectDetails(selectedOption: string, valName: string, capitalize: boolean) {
     this.selectedOption = selectedOption;
-    this.selectedValue = this.selectedUser[valName];
+    this.selectedValue = valName;
     this.capitalize = capitalize;
   }
 }
